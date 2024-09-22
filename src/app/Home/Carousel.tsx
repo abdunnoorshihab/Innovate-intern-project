@@ -1,3 +1,4 @@
+
 "use client";
 import React, { useState } from "react";
 
@@ -31,23 +32,11 @@ const Carousel = () => {
   return (
     <div className="relative flex justify-center items-center w-full py-10">
       {/* Left arrow */}
-
-      <button className="bg-black text-white rounded-full px-4 py-2"
-      onClick={handlePrevClick}>
-        <svg
-          width="24"
-          height="24"
-          viewBox="0 0 24 24"
-          fill="none"
-          stroke="currentColor"
-          stroke-width="2"
-          stroke-linecap="round"
-          stroke-linejoin="round"
-        >
-          <line x1="19" y1="12" x2="5" y2="12" />
-          <line x1="12" y1="19" x2="5" y2="5" />
-        </svg>
-        
+      <button
+        className="absolute left-0 text-3xl bg-gray-100 hover:bg-gray-300 text-gray-800 px-4 py-2 rounded-full focus:outline-none"
+        onClick={handlePrevClick}
+      >
+        &#8249;
       </button>
 
       {/* Carousel container */}
@@ -58,12 +47,10 @@ const Carousel = () => {
           const color = colors[adjustedIndex];
 
           // Determine size based on position relative to the center
-          let boxSize =
-            "w-20 h-28 sm:w-28 sm:h-36 md:w-36 md:h-40 lg:w-52 lg:h-60"; // Small box size for mobile/tablet/desktop
+          let boxSize = "w-20 h-28 sm:w-28 sm:h-36 md:w-36 md:h-40 lg:w-52 lg:h-60"; // Small box size for mobile/tablet/desktop
           let zIndex = "z-0";
           if (index === 2) {
-            boxSize =
-              "w-28 h-36 sm:w-40 sm:h-56 md:w-48 md:h-56 lg:w-64 lg:h-96"; // Main center box size
+            boxSize = "w-28 h-36 sm:w-40 sm:h-56 md:w-48 md:h-56 lg:w-64 lg:h-96"; // Main center box size
             zIndex = "z-10";
           }
 
@@ -78,22 +65,11 @@ const Carousel = () => {
       </div>
 
       {/* Right arrow */}
-      <button className="bg-black text-white rounded-full px-4 py-2"
-      onClick={handlePrevClick}>
-        <svg
-          width="24"
-          height="24"
-          viewBox="0 0 24 24"
-          fill="none"
-          stroke="currentColor"
-          stroke-width="2"
-          stroke-linecap="round"
-          stroke-linejoin="round"
-        >
-          <line x1="19" y1="12" x2="5" y2="12" />
-          <line x1="12" y1="19" x2="5" y2="5" />
-        </svg>
-        
+      <button
+        className="absolute right-0 text-3xl bg-gray-100 hover:bg-gray-300 text-gray-800 px-4 py-2 rounded-full focus:outline-none"
+        onClick={handleNextClick}
+      >
+        &#8250;
       </button>
     </div>
   );
